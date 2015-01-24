@@ -19,22 +19,11 @@
 	"crispus": {
 		"block_extension": "md",
 		"paths": {
-			"bin": "/bin",
 			"cache": "/data/cache",
 			"pages": "/pages",
-			"controllers": "/controllers",
 			"data": "/data",
-			"lib": "/lib",
-			"plugins": "/plugins",
 			"themes": "/themes",
 			"vendor": "/vendor"
-		}
-	},
-	"munee": {
-		"minify": true,
-        "packer": true,
-		"paths": {
-			"bin": "/bin/munee.php"
 		}
 	}
 }

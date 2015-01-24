@@ -11,6 +11,6 @@
         }
     ],
     "require": {
-        "rbnvrw/crispus"
+        "rbnvrw/crispus": "dev-master"
     }
 }

@@ -1,0 +1,16 @@
+{
+    "name": "rbnvrw/crispus-example",
+    "type": "library",
+    "description": "Example setup for Crispus CMS",
+    "homepage": "http://rubenverweij.nl/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ruben Verweij",
+            "email": "rbnvrw@gmail.com"
+        }
+    ],
+    "require": {
+        "rbnvrw/crispus"
+    }
+}

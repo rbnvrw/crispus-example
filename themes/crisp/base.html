@@ -12,18 +12,44 @@
     {% if page.author %}
 	    <meta name="author" content="{{ page.author }}"> 
     {% endif %}
+	
+	{% if assets.css %}
+		<link href="{{ assets.css }}" type="text/css" rel="stylesheet">
+	{% endif %}
     
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
         
   </head>
 
-  <body>
-    
+  <body class="cr">
+	<header>
+    {% block nav %}
+		<nav class="cr__nav">
+			<ul class="cr__nav__list">
+				<li class="cr__nav__list__item"><a href="#">Home</a></li>
+			</ul>
+		</nav>
+	{% endblock %}
+	{% block logo %}
+		<div>
+			<h1>{{ site.title }}</h1>
+		</div>
+	{% endblock %}
+	</header>
+	
     {% block content %}
-    <div>
+    <section>
         {{ blocks.content }}
-    </div> <!-- /container -->
+    </section> <!-- /container -->
     {% endblock %}
+	
+	{% block footer %}
+	<footer></footer>
+	{% endblock %}
+	
+	{% if assets.js %}
+		<script src="{{ assets.js }}">
+	{% endif %}
     
   </body>
 </html>

@@ -7,7 +7,7 @@
 		"js_theme_folder": "js",
 		"excerpt_length": 150,
 		"menu": {
-			"sort_order": "asc",
+			"sort_asc": true,
 			"sort_by": "sorting"
 		},
 		"render_content_page_list": false,
@@ -15,7 +15,8 @@
     },
 	"twig": {
 		"cache": false,
-        "autoescape": false
+        "autoescape": false,
+        "debug": true
 	},
 	"crispus": {
 		"block_extension": "md",

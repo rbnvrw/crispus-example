@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<section>{{ blocks.content }}</section>
+    
+    <ul>
+    {% for post in children|reverse if post.config.date and post.config.type == 'blog-post' %}
+        <li>{{ post.config.date }}: <a href="{{ post.url}}">{{ post.config.title }}</a></li>
+    {% endfor %}
+    </ul>
+    
+{% endblock %}

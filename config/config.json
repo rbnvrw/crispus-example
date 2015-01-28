@@ -3,8 +3,6 @@
 		"title": "Crispus CMS",
 		"theme": "crisp",
 		"not_found_page": "404",
-		"css_theme_folder": "css",
-		"js_theme_folder": "js",
 		"excerpt_length": 150,
 		"menu": {
 			"sort_asc": true,
@@ -25,7 +23,8 @@
 			"pages": "/pages",
 			"data": "/data",
 			"themes": "/themes",
-			"vendor": "/vendor"
+			"vendor": "/vendor",
+			"assets": "/assets"
 		}
 	}
 }

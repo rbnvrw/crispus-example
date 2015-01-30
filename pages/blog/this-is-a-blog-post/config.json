@@ -3,5 +3,7 @@
 	"Sorting": "2015-01-26",
 	"Date": "2015-01-26",
 	"Type": "blog-post",
-	"Template": "blog-post"
+	"Template": "blog-post",
+	"Author": "Ruben Verweij",
+	"Excerpt": "Here is an example blog post."
 }

@@ -9,7 +9,7 @@
 			"sort_by": "sorting"
 		},
 		"render_content_page_list": false,
-		"assets": [ "css/*.css", "js/*.js" ]
+		"assets": [ "css/pure.css", "css/grids-responsive.css", "css/blog.css", "css/style.css" ]
     },
 	"twig": {
 		"cache": false,

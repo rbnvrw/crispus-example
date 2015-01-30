@@ -14,45 +14,66 @@
     {% endif %}
 	
 	{% if assets.css %}
-		<link href="{{ assets.css }}" type="text/css" rel="stylesheet">
+	    {% for stylesheet in assets.css %}
+		    <link href="{{ stylesheet|e }}" type="text/css" rel="stylesheet">
+		{% endfor %}
 	{% endif %}
     
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
         
   </head>
 
-  <body class="cr">
-	<header>
-    {% block nav %}
-	{% if pages %}
-		<nav class="cr__nav">
-			<ul class="cr__nav__list">
-			{% for page in pages if page.config.menu == "true" %}
-				<li class="cr__nav__list__item"><a href="{{ page.url }}">{{ page.config.title }}</a></li>
-			{% endfor %}
-			</ul>
-		</nav>
-	{% endif %}
-	{% endblock %}
-	{% block logo %}
-		<div>
-			<h1>{{ site.title }}</h1>
-		</div>
-	{% endblock %}
-	</header>
+  <body>
+  <div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+	    <header class="header">
+	        {% block logo %}
+		        <h1 class="brand-title">{{ site.title }}</h1>
+                <h2 class="brand-tagline">{{ site.subtitle }}</h2>
+	        {% endblock %}
+	
+	        {% block nav %}
+	        {% if pages %}
+                <nav class="nav">
+                    <ul class="nav-list">
+                    {% for page in pages if page.config.menu == "true" %}
+                        <li class="nav-item">
+                            <a class="pure-button" href="{{ page.url }}">{{ page.config.title }}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </nav>
+	        {% endif %}
+	        {% endblock %}
+	    </header>
+	</div>
 	
     {% block content %}
-    <section>
-        {{ blocks.content }}
-    </section> <!-- /container -->
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            {{ blocks.content }}   
+        </div>
+    </div>
     {% endblock %}
+    
+    </div>
 	
 	{% block footer %}
-	<footer></footer>
+        <footer class="footer">
+            <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                <ul>
+                    {% for page in pages if page.config.menu == "true" %}
+                        <li><a href="{{ page.url }}">{{ page.config.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </footer>
 	{% endblock %}
 	
 	{% if assets.js %}
-		<script src="{{ assets.js }}">
+        {% for scriptfile in assets.js %}
+		    <script src="{{ scriptfile|e }}"></script>
+		{% endfor %}
 	{% endif %}
     
   </body>

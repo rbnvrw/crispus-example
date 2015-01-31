@@ -12,5 +12,6 @@
     ],
     "require": {
         "rbnvrw/crispus": "dev-master"
-    }
+    },
+    "minimum-stability": "dev"
 }

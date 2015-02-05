@@ -12,9 +12,7 @@
 		"assets": [ "css/pure.css", "css/grids-responsive.css", "css/crisp.css" ]
     },
 	"twig": {
-		"cache": false,
-        "autoescape": false,
-        "debug": true
+	    "autoescape": false
 	},
 	"crispus": {
 		"block_extension": "md",

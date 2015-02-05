@@ -9,7 +9,7 @@
 			"sort_by": "sorting"
 		},
 		"render_content_page_list": false,
-		"assets": [ "css/pure.css", "css/grids-responsive.css", "css/blog.css", "css/style.css" ]
+		"assets": [ "css/pure.css", "css/grids-responsive.css", "css/crisp.css" ]
     },
 	"twig": {
 		"cache": false,
@@ -23,8 +23,7 @@
 			"pages": "/pages",
 			"data": "/data",
 			"themes": "/themes",
-			"vendor": "/vendor",
-			"assets": "/assets"
+			"vendor": "/vendor"
 		}
 	}
 }

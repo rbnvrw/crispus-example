@@ -2,30 +2,26 @@
 
 {% block content %}
 
-<div class="content pure-u-1 pure-u-md-3-4">
-        <div>
-        <!-- A wrapper for all the blog posts -->
-        <div class="posts">
-            <h1 class="content-subhead">{{ page.date }}</h1>
+    <!-- A wrapper for all the blog posts -->
+    <div class="posts">
+        <h1 class="content__subhead">{{ page.date }}</h1>
 
-            <!-- A single blog post -->
-            <section class="post">
-                <header class="post-header">
-                    <a href="{{ page.url }}"><h2 class="post-title">{{ page.title }}</h2></a>
+        <!-- A single blog post -->
+        <section class="post">
+            <header class="post__header">
+                <a href="{{ page.url }}"><h2 class="post__title">{{ page.title }}</h2></a>
 
-                    <p class="post-meta">
-                    {% if page.author %}By {{ page.author }}{% endif %}
-                    </p>
-                </header>
+                <p class="post__meta">
+                {% if page.author %}By {{ page.author }}{% endif %}
+                </p>
+            </header>
 
-                <div class="post-description">
-                    <p>
-                    {{ blocks.content }}
-                    </p>
-                </div>
-            </section>
-            </div>       
-        </div>
+            <div class="post__description">
+                <p>
+                {{ blocks.content }}
+                </p>
+            </div>
+        </section>
     </div>
 
 {% endblock %}

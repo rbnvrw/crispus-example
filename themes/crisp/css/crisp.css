@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+#crisp {
+    padding: 0;
+    color: #222;
+}
+
 a {
     text-decoration: none;
     color: rgb(61, 146, 201);
@@ -18,13 +23,14 @@ h3 {
 }
 
 /* LAYOUT CSS */
-.pure-img-responsive {
+.img-responsive {
     max-width: 100%;
     height: auto;
 }
 
-#layout {
-    padding: 0;
+.sidebar {
+    background: rgb(61, 79, 93);
+    color: #fff;
 }
 
 .header {
@@ -33,34 +39,30 @@ h3 {
     margin: 3em auto;
 }
 
-.sidebar {
-    background: rgb(61, 79, 93);
-    color: #fff;
-}
-
-.brand-title,
-.brand-tagline {
+.header__brand__title,
+.header__brand__tagline {
     margin: 0;
 }
-.brand-title {
+.header__brand__title {
     text-transform: uppercase;
 }
-.brand-tagline {
+.header__brand__tagline {
     font-weight: 300;
     color: rgb(176, 202, 219);
 }
 
-.nav-list {
+.nav__list {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.nav-item {
+.nav__list__item {
     display: inline-block;
     *display: inline;
     zoom: 1;
+    max-width: 100%;
 }
-.nav-item a {
+.nav__list__item__a {
     background: transparent;
     border: 2px solid rgb(176, 202, 219);
     color: #fff;
@@ -68,14 +70,19 @@ h3 {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     font-size: 85%;
+    max-width: 100%;
 }
-.nav-item a:hover,
-.nav-item a:focus {
+.nav__list__item__a:hover,
+.nav__list__item__a:focus {
     border: 2px solid rgb(61, 146, 201);
     text-decoration: none;
 }
 
-.content-subhead {
+.content {
+    padding: 2em 1em 0;
+}
+
+.content__subhead {
     text-transform: uppercase;
     color: #aaa;
     border-bottom: 1px solid #eee;
@@ -85,58 +92,54 @@ h3 {
     letter-spacing: 0.1em;
 }
 
-.content {
-    padding: 2em 1em 0;
-}
-
 .post {
     padding-bottom: 2em;
 }
-.post-title {
+.post__title {
     font-size: 2em;
     color: #222;
     margin-bottom: 0.2em;
 }
-.post-avatar {
+.post__thumb {
     border-radius: 50px;
     float: right;
     margin-left: 1em;
 }
-.post-description {
+.post__description {
     font-family: Georgia, "Cambria", serif;
     color: #444;
     line-height: 1.8em;
 }
-.post-meta {
+.post__meta {
     color: #999;
     font-size: 90%;
     margin: 0;
 }
 
-.post-category {
+.post__category {
     margin: 0 0.1em;
     padding: 0.3em 1em;
     color: #fff;
     background: #999;
     font-size: 80%;
 }
-    .post-category-design {
+    .post__category--design {
         background: #5aba59;
     }
-    .post-category-pure {
+    .post__category--pure {
         background: #4d85d1;
     }
-    .post-category-yui {
+    .post__category--yui {
         background: #8156a7;
     }
-    .post-category-js {
+    .post__category--js {
         background: #df2d4f;
     }
 
-.post-images {
+.post__images {
     margin: 1em 0;
 }
-.post-image-meta {
+.post__image__meta {
     margin-top: -3.5em;
     margin-left: 1em;
     color: #fff;
@@ -147,12 +150,12 @@ h3 {
     text-align: center;
     padding: 1em 0;
 }
-.footer a {
+.footer__link {
     color: #ccc;
     font-size: 80%;
 }
-.footer .pure-menu a:hover,
-.footer .pure-menu a:focus {
+.footer__link:hover,
+.footer__link:focus {
     background: none;
 }
 

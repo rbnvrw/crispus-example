@@ -2,34 +2,31 @@
 
 {% block content %}
 
-	<section>{{ blocks.content }}</section>
+	<section>{{ blocks.content }}</section>    
     
-    <div class="content pure-u-1 pure-u-md-3-4">
-        <div>
-        <!-- A wrapper for all the blog posts -->
-        <div class="posts">
-            {% for post in children|reverse if post.config.date and post.config.type == 'blog-post' %}
-                <h1 class="content-subhead">{{ post.config.date }}</h1>
+    <!-- A wrapper for all the blog posts -->
+    <div class="posts">
+        {% for post in children|reverse if post.config.date and post.config.type == 'blog-post' %}
+            <h1 class="content__subhead">{{ post.config.date }}</h1>
 
-                <!-- A single blog post -->
-                <section class="post">
-                    <header class="post-header">
-                        <a href="{{ post.url }}"><h2 class="post-title">{{ post.config.title }}</h2></a>
+            <!-- A single blog post -->
+            <section class="post">
+                <header class="post__header">
+                    <a href="{{ post.url }}"><h2 class="post__title">{{ post.config.title }}</h2></a>
 
-                        <p class="post-meta">
-                        {% if post.config.author %}By {{ post.config.author }}{% endif %}
-                        </p>
-                    </header>
+                    <p class="post__meta">
+                    {% if post.config.author %}By {{ post.config.author }}{% endif %}
+                    </p>
+                </header>
 
-                    <div class="post-description">
-                        <p>
-                        {{ post.config.excerpt }}
-                        </p>
-                    </div>
-                </section>
-            </div>   
-        {% endfor %}     
-        </div>
+                <div class="post__description">
+                    <p>
+                    {{ post.config.excerpt }}
+                    </p>
+                </div>
+            </section>
+        </div>   
+    {% endfor %}     
     </div>
     
 {% endblock %}
